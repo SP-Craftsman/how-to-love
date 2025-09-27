@@ -186,7 +186,7 @@ function love.draw()
 			--First check if the tile is not zero
 			if tile ~= 0 then
 				--Set the color. .setColor() also accepts a table with 3 numbers.
-				--We pass the table with as position the value of tile.
+				--We pass the table the table whose position in colors matches the value of tile
 				--So if tile equals 3 then we pass colors[3] which is {1, 0, 1}
 				love.graphics.setColor(colors[tile])
 				--Draw the tile
@@ -440,7 +440,7 @@ function love.draw()
    		end
    	end
 
-   	--Draw the player and multiple its tile position with the tile width and height
+   	--Draw the player and multiply its tile position with the tile width and height
    	love.graphics.draw(player.image, player.tile_x * width, player.tile_y * height)
 end
 ```
